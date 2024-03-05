@@ -1,3 +1,9 @@
+---
+layout: page
+title: High Level Functional Description
+hero_height: is-fullwidth
+---
+
 # High Level functional description
 
 # Introduction
