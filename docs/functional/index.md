@@ -8,110 +8,8 @@ Party). The diagram explains the components which are explained in more details 
 
 The diagram is generic in nature and not tied to any implementation
 
-{% plantuml %}
-
-@startuml
-'https://plantuml.com/component-diagram
-
-skinparam legendBackgroundColor #white
-skinparam legendForegroundColor #black
-
-title High level functional components per role
-caption These are high level functional components for the issuer, holder/wallet and relying party roles.\nGiven these are roles a single system could fulfill multiple roles
-legend top left
-Legend
-|<back:lightblue><color:lightblue>##</back>| ARF required flows are listed in <back:white><color:lightblue>blue</back> |
-end legend
-
-package "(Q)EAA Provider - Issuer" {
-  [(Q)EAA Provider] as [(Q)EAA Provider Issuer]
-  [KMS & DID mgmt] as [KMS & DID mgmt Issuer]
-  [Trust mgmt] as [Trust mgmt Issuer]
-  [Auth] as [Auth Issuer]
-  [Web app /\nResource Server] as [Web app Issuer]
-  [(Q)EAA Provider Issuer] - "Issuance API"
-  [(Q)EAA Provider Issuer] --> [Trust mgmt Issuer]
-  [(Q)EAA Provider Issuer] --> [Auth Issuer]
-  [(Q)EAA Provider Issuer] --> [KMS & DID mgmt Issuer]
-
-  database "Issuer DB" {
-  }
-
-
-node "Issuance API interfaces" {
-    [OID4VCI] as [OID4VCI Issuer] #lightblue
-    [OID4VCI Issuer] -r[#lightblue]- "OID4VCI MGMT API"
-    [OID4VCI Issuer] -d[#lightblue]- "OID4VCI Wallet API"
-    [(Q)EAA Provider Issuer] -d[#lightblue]-> "OID4VCI MGMT API"
-}
-}
-
-
-
-
-package "Wallet/Holder" {
-  [(Q)EAA mgmt] as [(Q)EAA mgmt Holder]
-  [KMS & DID mgmt] as [KMS & DID mgmt Holder]
-  [Trust mgmt] as [Trust mgmt Holder]
-  [(Q)EAA mgmt Holder] - "Q(E)AA api"
-  [(Q)EAA mgmt Holder] --> [Trust mgmt Holder]
-  [(Q)EAA mgmt Holder] --> [KMS & DID mgmt Holder]
-  [(Q)EAA mgmt Holder] "OID4VCI" .l[#lightblue].> "Issuance API"
-  note left on link
-          Issuer issues one or more
-          PIDs and/or (Q)EAAs
-          to the Wallet
-  end note
-  database "Wallet DB"
-
-  node "Wallet transport" {
-   [OID4VP Client] #lightblue
-   [OID4VCI Client] #lightblue
-   [OID4VCI Client] -[#lightblue]-> "OID4VCI Wallet API"
-   [(Q)EAA mgmt Holder] -[#lightblue]-> [OID4VCI Client]
-   [(Q)EAA mgmt Holder] -[#lightblue]-> [OID4VP Client]
-  }
-
-}
-
-
-
-package "Relying Party" {
-  [(Q)EAA mgmt] as [(Q)EAA mgmt RP]
-  [KMS & DID mgmt] as [KMS & DID mgmt RP]
-  [Trust mgmt] as [Trust mgmt RP]
-  [Web app /\nResource Server] as [Web app RP]
-  [(Q)EAA mgmt RP] --> [Trust mgmt RP]
-  [(Q)EAA mgmt RP] --> [KMS & DID mgmt RP]
-  [(Q)EAA mgmt RP] - "Verification API"
-  database "RP DB"
-  [(Q)EAA mgmt Holder] "OID4VP" .r[#lightblue].> "Verification API"
-  note right on link
-            Relying Party requests one or more
-            PIDs and/or (Q)EAAs
-            from the wallet
-  end note
-
-  node "Relying Party API interfaces" {
-      [OID4VP] as [OID4VP RP] #lightblue
-      [OID4VP RP] -[#lightblue]- "OID4VP RP API"
-      [OID4VP RP] -[#lightblue]- "OID4VP MGMT API"
-      [OID4VP Client] -r[#lightblue]-> "OID4VP RP API"
-       [(Q)EAA mgmt RP] -[#lightblue]-> "OID4VP MGMT API"
-  }
-
-}
-
-
-
-
-"Issuance API" .d..> "Issuance API interfaces"
-"Q(E)AA api" .d..> "Wallet transport"
-"Verification API" .d..> "Relying Party API interfaces"
-
-@enduml
-
-{% endplantuml %}
+![](../static/High-level-roles-APIs.png)
+[Plant UML source](../assets/High-level-roles-APIs.puml)
 
 > Legend:
 >
@@ -208,7 +106,7 @@ The steps involved:
 
 # High level (Q)EAA verification flow
 
-![](../assets/High%20Level%20QEAA%20verification%20flow.drawio.svg)
+![](../static/High%20Level%20QEAA%20verification%20flow.drawio.svg)
 
 1. **Client Registration (optional):** The relying party (RP) or client must register with the OpenID provider (OP).
    This involves obtaining an optional client ID and client secret to authenticate and interact with the OP. If not used
