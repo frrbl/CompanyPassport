@@ -55,6 +55,9 @@ jobs:
         uses: Timmy/plantuml-action@v1
         with:
           args: '-I assets/*.puml -o ../docs/_site/static -tpng'
+      - name: Move non-plantuml assets into build directory
+        run: |
+          find ./assets -type f ! -name '*.puml' -exec cp {} ./docs/_site/static/ \;
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
