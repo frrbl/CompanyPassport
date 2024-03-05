@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   project. You will need to support these specification in order for your software solution to be compatible with it.
 baseurl: "/CompanyPassport" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000/CompanyPassport"
+url: ""
 twitter_username: jekyllrb
 github_username:  jekyll
 
