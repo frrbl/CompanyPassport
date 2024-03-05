@@ -12,7 +12,7 @@ Party). The diagram explains the components which are explained in more details 
 
 The diagram is generic in nature and not tied to any implementation
 
-![](/assets/img/High-level-roles-APIs.png)
+![]({{'/assets/img/High-level-roles-APIs.png' | relative_url }})
 [Plant UML source]({{ site.assets_root }}/High-level-roles-APIs.puml)
 
 > Legend:
@@ -75,7 +75,7 @@ The following assumptions have been made:
     - EBSI
 - A high security implementation profile is required (HAIP)
 
-![](/assets/img/High%20Level%20QEAA%20issuance%20flow.drawio.svg)
+![]({{'/assets/img/High%20Level%20QEAA%20issuance%20flow.drawio.svg' | relative_url}})
 
 The steps involved:
 
@@ -110,7 +110,7 @@ The steps involved:
 
 # High level (Q)EAA verification flow
 
-![](/assets/img/High%20Level%20QEAA%20verification%20flow.drawio.svg)
+![]({{'/assets/img/High%20Level%20QEAA%20verification%20flow.drawio.svg' | relative_url}})
 
 1. **Client Registration (optional):** The relying party (RP) or client must register with the OpenID provider (OP).
    This involves obtaining an optional client ID and client secret to authenticate and interact with the OP. If not used
