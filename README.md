@@ -21,7 +21,7 @@ may provide valuable input to other trust frameworks and initiatives related to
 organizational digital identity. For instance the eIDAS/EUDI Wallet LSP’s, EBSI,
 Gaia-X, ESG reporting (Environmental, Social, Governance), EU DPP (Digital
 Product Passports), ESPR (Ecodesign for Sustainable Products Regulation), CSRD
-(Corporate Sustainability Reporting Directive) etc
+(Corporate Sustainability Reporting Directive) etc.
 As part of the overall Company Passport trust framework, the architectural and
 technical specifications need to be agreed upon and described. This work is caried
 out by the Company Passport Architecture Working Group and documented in this
