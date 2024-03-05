@@ -1,3 +1,9 @@
+---
+layout: page
+title: Issuance
+hero_height: is-fullwidth
+---
+
 ## Issuance using Authorization Code flow
 
 ![]({{'assets/Issuance-Authorization-code.svg' | relative_url }})

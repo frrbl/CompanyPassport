@@ -1,7 +1,7 @@
 ---
 layout: page
 url: /technical/status-list
-title: High Level Functional Description
+title: Revocation
 hero_height: is-fullwidth
 ---
 # Statuslist
