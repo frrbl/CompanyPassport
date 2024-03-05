@@ -4,8 +4,6 @@ title: High Level Functional Description
 hero_height: is-fullwidth
 ---
 
-# High Level functional description
-
 # Introduction
 
 Please note that the high-level component diagram provided below is only functional in nature and is meant to inform the
@@ -14,8 +12,8 @@ Party). The diagram explains the components which are explained in more details 
 
 The diagram is generic in nature and not tied to any implementation
 
-![](../static/High-level-roles-APIs.png)
-[Plant UML source](../assets/High-level-roles-APIs.puml)
+![](/assets/img/High-level-roles-APIs.png)
+[Plant UML source]({{ site.assets_root }}/High-level-roles-APIs.puml)
 
 > Legend:
 >
@@ -77,7 +75,7 @@ The following assumptions have been made:
     - EBSI
 - A high security implementation profile is required (HAIP)
 
-![](../assets/High%20Level%20QEAA%20issuance%20flow.drawio.svg)
+![](/assets/img/High%20Level%20QEAA%20issuance%20flow.drawio.svg)
 
 The steps involved:
 
@@ -112,7 +110,7 @@ The steps involved:
 
 # High level (Q)EAA verification flow
 
-![](../static/High%20Level%20QEAA%20verification%20flow.drawio.svg)
+![](/assets/img/High%20Level%20QEAA%20verification%20flow.drawio.svg)
 
 1. **Client Registration (optional):** The relying party (RP) or client must register with the OpenID provider (OP).
    This involves obtaining an optional client ID and client secret to authenticate and interact with the OP. If not used
