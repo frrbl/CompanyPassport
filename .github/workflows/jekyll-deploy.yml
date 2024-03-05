@@ -57,7 +57,7 @@ jobs:
           args: '-I assets/*.puml -o ../docs/_site/static -tpng'
       - name: Move non-plantuml assets into build directory
         run: |
-          mkdir -p ./docs/_site/static/
+          find ./assets -type f ! -name '*.puml' -exec chmod u+rw {} \;
           find ./assets -type f ! -name '*.puml' -exec cp {} ./docs/_site/static/ \;
 
       - name: Upload artifact
