@@ -54,7 +54,7 @@ jobs:
       - name: Generate PlantUML diagrams
         uses: Timmy/plantuml-action@v1
         with:
-          args: '-I assets/*.puml -o docs/_site/static -tpng'
+          args: '-I assets/*.puml -o ../docs/_site/static -tpng'
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
