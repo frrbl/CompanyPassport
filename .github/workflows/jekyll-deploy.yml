@@ -56,7 +56,7 @@ jobs:
         with:
           args: '-I assets/*.puml -o ../docs/_site/static -tpng'
       - name: Move non-plantuml assets into build directory
-        run: ls && ./copy-assets-to-build.sh
+        run: sudo ./copy-assets-to-build.sh
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
