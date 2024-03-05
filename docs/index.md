@@ -2,7 +2,6 @@
 layout: page
 title: Company Passport
 subtitle: Technical specification
-hero_height: is-fullwidth
 ---
 
 # Project description
@@ -57,6 +56,9 @@ may be added.
 4. **Bank Account Opening**:
    The company approaches a bank to open a business account, necessary for financial transactions. The bank conducts KYC
    and AML checks to ensure financial regulation compliance before account creation.
+
+![sequence](static/use-case-seq.png)
+
 
 {:style="text-align:center;"}
 
