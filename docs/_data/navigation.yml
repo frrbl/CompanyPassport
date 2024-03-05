@@ -1,7 +1,5 @@
 - name: Scope
   link: /scope/
-- name: Glossary
-  link: /glossary/
 - name: Functional
   link: /functional/
 - name: Technical
@@ -13,3 +11,5 @@
       link: /technical/verification/
     - name: Revocation
       link: /technical/status-list/
+- name: Glossary
+  link: /glossary/
