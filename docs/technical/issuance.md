@@ -1,5 +1,7 @@
 ## Issuance using Authorization Code flow
 
+![]({{'assets/Issuance-Authorization-code.svg' | relative_url }})
+
 See source [Diagram]({{'/assets/Issuance-Authorization-code.puml' | relative_url}}) or [Image]({{'/assets/Issuance-Authorization-code.svg' | relative_url}})
 
 ### Initialization:
