@@ -54,7 +54,7 @@ jobs:
       - name: Generate PlantUML diagrams
         uses: Timmy/plantuml-action@v1
         with:
-          args: '-I assets/*.puml -o ../docs/_site/static -tpng'
+          args: '-I assets/*.puml -o ../docs/_site/assets/img -tpng'
       - name: Move non-plantuml assets into build directory
         run: sudo ./copy-assets-to-build.sh
       - name: Upload artifact
